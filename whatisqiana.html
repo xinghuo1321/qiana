@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="qiana">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>什么是钱啊</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/frozen.css">
+
+    <!-- Demo styles -->
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        /* -webkit-align-items: center;
+            align-items: center;*/
+        -webkit-align-items: inherit;
+        align-items: inherit;
+     }
+    .swiper-slide img {max-width:100%;margin-top:15px;}
+    .swiper-button-next {
+        background-image: url(./img/up.png);
+        bottom:0;
+        top:auto;
+        animation: arrowUp 3s infinite ease-in;
+        -webkit-animation: arrowUp 2s infinite ease-in;
+        visibility:visible;
+        background-size:100%;
+        right:0;
+        left:50%;
+        margin-left:-15px;
+    }
+    .swiper-button-next.swiper-button-disabled {
+        background-image: url(./img/down.png);
+        bottom:0;
+        top:auto;
+        animation: arrowDown 3s infinite ease-in;
+        -webkit-animation: arrowDown 2s infinite ease-in;
+        visibility:visible;
+        background-size:100%;
+        right:0;
+        left:50%;
+        margin-left:-15px;
+    }
+    .a,.b.c,.d,.e,.f {
+        width:100%;
+        height:100%;
+    }
+    .a {
+        background:url(./img/showqa01.png) no-repeat center top;
+        background-size: 100%;
+    }
+    .b {
+        background:url(./img/showqa02.png) no-repeat center top;
+        background-size: 100%;
+    }
+    .c {
+        background:url(./img/showqa03.png) no-repeat center top;
+        background-size: 100%;
+    }
+    .d {
+        background:url(./img/showqa04.png) no-repeat center top;
+        background-size: 100%;
+    }
+    .e {
+        background:url(./img/showqa05.png) no-repeat center top;
+        background-size: 100%;
+    }
+    .f {
+        background:url(./img/showqa06.png) no-repeat center top;
+        background-size: 100%;
+        position:relative;
+    }
+    .ui-btn-lg {
+        position: absolute;
+        left: 15%;
+        width: 70%;
+        top: 50%;
+        height: 55px;
+        font-weight: 800;
+        font-size: 20px;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, #DA5549), to(#DA5549));
+    }
+    @keyframes arrowDown {
+      0% {
+    transform:translateY(0px);
+    opacity: 0;
+      }
+      60% {
+    transform:translateY(12px);
+    opacity: 1;
+      }
+      100% {
+    transform:translateY(42px);
+    opacity: 0;
+      }
+    }
+    @-webkit-keyframes arrowDown {
+      0% {
+    -webkit-transform:translateY(0px);
+    opacity: 0;
+      }
+      60% {
+    -webkit-transform:translateY(12px);
+    opacity: 1;
+      }
+      100% {
+    -webkit-transform:translateY(20px);
+    opacity: 0;
+      }
+    }
+
+    @keyframes arrowUp {
+      0% {
+    transform:translateY(42px);
+    opacity: 0;
+      }
+      60% {
+    transform:translateY(12px);
+    opacity: 1;
+      }
+      100% {
+    transform:translateY(0px);
+    opacity: 0;
+      }
+    }
+    @-webkit-keyframes arrowUp {
+      0% {
+    -webkit-transform:translateY(20px);
+    opacity: 0;
+      }
+      60% {
+    -webkit-transform:translateY(12px);
+    opacity: 1;
+      }
+      100% {
+    -webkit-transform:translateY(0px);
+    opacity: 0;
+      }
+    }
+    </style>
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide a"><!-- <img src="showqa01.png"> --></div>
+            <div class="swiper-slide b"><!-- <img src="showqa02.png"> --></div>
+            <div class="swiper-slide c"><!-- <img src="showqa03.png"> --></div>
+            <div class="swiper-slide d"><!-- <img src="showqa04.png"> --></div>
+            <div class="swiper-slide e"><!-- <img src="showqa05.png"> --></div>
+            <div class="swiper-slide f"><!-- <img src="showqa06.png"> --><button class="ui-btn-lg ui-btn-danger" onclick="window.history.go(-1)">开始赚钱</button></div>
+        </div>
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        direction: 'vertical'
+    });
+    </script>
+</body>
+</html>

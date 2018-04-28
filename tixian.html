@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <title>支付宝提现</title>
+    </head>
+    <style>
+    body{background-color: #F5F5F5;}
+    </style>
+
+    <body ontouchstart="">
+        <h2 class="common-title ui-border-b student"><i><a href=""></a></i><span>支付宝提现</span></h2>
+        <div id="tixian">
+            <ul class="ui-list ui-list-text ui-border-tb">
+                <li class="ui-border-t">
+                    <h4>支付宝</h4>
+                    <div class="ui-txt-info">22987557@sina.com</div>
+                </li>
+                <li class="ui-border-t">
+                    <h4>姓名</h4>
+                    <div class="ui-txt-info">zhifubao</div>
+                </li>
+                <li class="ui-border-t">
+                    <h4>提现金额</h4>
+                    <div class="i_num">10.00元</div>
+                </li>
+                <li class="ui-border-t">
+                    <h4>可提金额</h4>
+                    <div>2.00元</div>
+                </li>
+            </ul>
+            <div class="tx_btn_tj">
+                <div>
+                    <ul>
+                        <li>每次提现支付宝会收取一定受哦续费（提现10元手续费为0.5元）</li>
+                        <li>双休日节假日不处理提现业务</li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="ui-btn-lg ui-btn-danger wufengdemo">
+                        提交
+                    </button>
+                </div>
+                <p><img src="./img/tx_title.png">提现记录</p>
+            </div>
+            <div>
+                <ul class="ui-list ui-list-text ui-border-tb">
+                    <li class="ui-border-t">
+                        <h4>2015-5-6&nbsp;16:07:25</h4>
+                        <div>160.00元</div>
+                    </li>
+                    <li class="ui-border-t">
+                        <h4>2015-5-6&nbsp;16:07:25</h4>
+                        <div>15.00元</div>
+                    </li>
+                    <li class="ui-border-t">
+                        <h4>2015-5-6&nbsp;16:07:25</h4>
+                        <div>40.00元</div>
+                    </li>
+                </ul>
+                <p>暂时没有提现记录</p>
+            </div>
+
+            <div id="tx_dialog" class="ui-dialog">   <!-- 提现页面弹窗 -->
+                <div class="ui-dialog-cnt">
+                    <div class="ui-dialog-bd">
+                        <div class="tx_detail">
+                            <ul class="ui-list ui-list-text ui-border-tb">
+                                <li class="ui-border-t" data-href="" >
+                                    <h4><i>10.00元</i></h4>
+                                </li>
+                                <li class="ui-border-t" data-href="" >
+                                    <h4><i>30.00元</i>（优惠价：28.00元）</h4>
+                                </li>
+                                <li class="ui-border-t" data-href="" >
+                                    <h4><i>50.00元</i>（优惠价：46.00元）</h4>
+                                </li>
+                                <li class="ui-border-t" data-href="" >
+                                    <h4><i>100.00元</i>（优惠价：90.00元）</h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="ui-btn-lg ui-btn-danger" onclick="$('#tx_dialog').removeClass('show');">
+                            取消
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/frozen.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+
+            //判断是否绑定支付宝语句，否则加载下面的内容，弹出提示
+
+            var text = "<a style='color:#00a5e0' href='http://baidu.com/'>绑定</a>"
+            var dia=$.dialog({
+                title:'温馨提示',
+                content:'请先绑定支付宝账号',
+                button:["确认",text]
+            });
+
+        }
+
+        $('.i_num').tap(function(){
+            $('#tx_dialog').addClass("show");
+        })
+        $('.tx_detail li').tap(function(){
+            var innerNum = $("#tixian .i_num");
+            //alert($(this).find("i").html());
+            innerNum.html($(this).find("i").html());
+            $("#tx_dialog").removeClass("show");
+        });
+    </script>
+    </body>
+</html>

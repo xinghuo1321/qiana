@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+         <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+        <!--<meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" /> -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <script src="js/zepto.min.js"></script>
+        <script type="text/javascript" src="js/ichart.1.2.1.src.js"></script>
+        <title>我的主页</title>
+    </head>
+    <style>
+ 	body{background-color: #F5F5F5;}
+    </style>
+
+    <body ontouchstart="">
+        <h2 class="common-title ui-border-b student"><i><a href=""></a></i><span>我的主页</span></h2>
+        <div id="mypage">
+            <div id="mypage_top">
+                <ul class="ui-list ui-list-text ui-border-tb">
+                    <li class="ui-border-t">
+                        <div><img src="./img/default_head.png"></div>
+                        <div>
+                            <p>我开始摇滚了</p>
+                            <p>id:<i>88888888</i></p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="ui-tab-nav">
+                    <li>等级</li>
+                    <li>明细</li>
+                    <li>资料</li>
+                </ul>
+            </div>
+            <div id="mypage_middle">
+                <ul class="ui-tab-nav">
+                    <li>
+                        <p><i>4</i>名徒弟</p>
+                        <p>累计奖励0.00元</p>
+                    </li>
+                    <li>
+                        <p><i>12</i>名徒孙</p>
+                        <p>累计奖励0.00元</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="mypage_end">
+                <p>我的收益分布</p>
+                <div id='canvasDiv'></div>
+                <div id="zhezhao"></div>
+                <p>近期收益趋势</p>
+                <div id='canvasDiv2'></div>
+            </div>
+        </div>
+    </body>
+            <script type="text/javascript">
+                    /*window.onresize = function(){
+                            if ( window.orientation == 180 || window.orientation==0 ) {
+                                window.location.reload();
+                            }
+                            if ( window.orientation == 90 || window.orientation == -90 ) {
+                                window.location.reload();
+                            }
+                    }*/
+                    var widthdevice = $(window).width() - 50;
+                    var data = [
+                                {name : '任务',value :0,color:'#ff0000'},
+                                {name : '徒弟',value :100,color:'#ff0000'},
+                                {name : '徒孙',value :0,color:'#ff0000'}
+                            ];
+                    var data2 = [
+                            {
+                                name : '',
+                                value:[900,250,310,40,2,4],
+                                color:'#ff0000',
+                                line_width:2
+                            }
+                         ];
+                    //柱状图
+                    new iChart.Column2D({
+                        render : 'canvasDiv',
+                        data: data,
+                        title : '',
+                        showpercent:true,
+                        decimalsnum:2,
+                        width : widthdevice,
+                        height : 200,
+                        animation : true,//开启过渡动画
+                        animation_duration:3000,//800ms完成动画
+                        coordinate:{
+                            background_color:'#fefefe',
+                            scale:[{
+                                 position:'left',
+                                 start_scale:0,
+                                 end_scale:100,
+                                 scale_space:50,  //X轴区间
+                                 label : {color:'#a4a4a4',fontsize:11},
+                                 listeners:{
+                                    parseText:function(t,x,y){
+                                        return {text:t+"%"}
+                                    }
+                                }
+                                }]
+                        }
+                    }).draw();
+
+                    //线状图
+                    var labels = ["10-1","10-2","10-3","10-4","10-5","10-6"];
+                    var line = new iChart.LineBasic2D({
+                        render : 'canvasDiv2',
+                        data: data2,
+                        align:'center',
+                        width : widthdevice,
+                        height : 200,
+                        animation : true,//开启过渡动画
+                        animation_duration:300,//800ms完成动画
+                        sub_option : {
+                            label:false,
+                            smooth : true,
+                            point_size:8
+                        },
+                        tip:{
+                            enable:true,
+                            shadow:false,
+                            listeners:{
+                                 //tip:提示框对象、name:数据名称、value:数据值、text:当前文本、i:数据点的索引
+                                parseText:function(tip,name,value,text,i){
+                                    return value+"元";
+                                }
+                            }
+                        },
+                        legend : {
+                            enable : false
+                        },
+                        coordinate:{
+                            width:widthdevice,
+                            axis:{color:'#fff'},
+                            scale:[{
+                                 position:'left',
+                                 start_scale:0,
+                                 end_scale:0,
+                                 scale_space:0,
+                                 scale_size:0,
+                                 label : {color:'#fff',fontsize:14}
+                            },{
+                                 position:'bottom',
+                                 label : {color:'#a4a4a4',fontsize:14},
+                                 labels:labels
+                            }]
+                        }
+                    });
+                //开始画图
+                    line.draw();
+
+                    //});
+
+            </script>
+</html>

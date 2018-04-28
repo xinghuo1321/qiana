@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <title>收徒</title>
+
+        <style type="text/css">
+        .ui-btn-wrap {padding:10px 35px 30px 35px;}
+        </style>
+    </head>
+
+    <body ontouchstart="">
+    	<h2 class="common-title ui-border-b student"><i><a href=""></a></i><span>收徒</span><a class="ewm">二维码名片</a></h2>
+    	<div id="top-student">
+			<div><span>累计学徒奖励</span><span><i>22</i>元</span></div>
+			<div>
+                <div>
+                    <p>徒弟<i>5</i>个</p>
+                    <p>（10%收入奖励）</p>
+                </div>
+                <div>
+                    <p>徒孙<i>0</i>个</p>
+                    <p>（10%收入奖励）</p>
+                </div>
+            </div>
+		</div>
+		<div id="student_list">
+            <div class="div-out">
+                <div class="div-left">
+                    <p><img src="./img/lv1.png" /><span>LV0<i>当前等级</i></span></p>
+                    <p>徒弟奖励为<i>15%</i>  徒孙奖励为<i>10%</i>  </p>
+                </div>
+                <p id="st_title">距离LV1：徒弟奖励增至<i>16%</i>  徒孙奖励增至<i>20%</i>  </p>
+                <div class="div-right">
+                    <div>
+                        <div class="right2">累计徒弟（名）</div>
+                        <div class="gray-bar"><div class="red-bar" style="width: 100%;"></div><span class="bar-num">2/2</span></div>
+                    </div>
+                    <div>
+                        <div class="right2">累计收入（元）</div>
+                        <div class="gray-bar"><div class="red-bar" style="width: 20%;"></div><span class="bar-num">2/10</span></div>
+                    </div>
+                </div>
+                <p id="st_more"><a>点击查看更多等级情况</a></p>
+            </div>
+		</div>
+        <p id="st_button">免费发3元红包给朋友，领取的同时成为您的徒弟</p>
+		<div class="ui-btn-wrap">
+            <button class="ui-btn-lg ui-btn-danger">
+                分享好友收徒
+            </button>
+        </div>
+        <div>
+	        <ul class="ui-list ui-list-text ui-border-tb ui-list-link">
+	            <li class="ui-border-t ui-list-item-link" data-href="">
+	                <p>为什么要收徒</p>
+	            </li>
+	            <li class="ui-border-t ui-list-item-link" data-href="">
+	                <p>如何收取更多徒弟</p>
+	            </li>
+	        </ul>
+       </div>
+    </body>
+
+ 	<script src="js/zepto.min.js"></script>
+ 	<script src="js/frozen.js"></script>
+    <script type="text/javascript">
+        $('.ui-list-link li').click(function(){
+            location.href= $(this).data('href');
+        });
+        $(".ewm").tap(function(){
+            $(".ui-dialog").addClass("show");
+        })
+        $(".ui-dialog").tap(function(){
+        	$(this).removeClass("show");
+        })
+    </script>
+
+</html>

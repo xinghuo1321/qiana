@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <title>资料</title>
+    </head>
+    <style>
+ 	body{background-color: #F5F5F5;}
+    </style>
+    <body ontouchstart="">
+        <h2 class="common-title ui-border-b student"><i><a></a></i><span>资料</span></h2>
+        <div id="zl">
+            <ul class="ui-list ui-list-text ui-border-tb">
+                <li class="ui-border-t">
+                    <h4>头像</h4>
+                    <img id="demo" src="./img/default_head.png">
+                    <input id="text" type="file" name="pic" accept="image/png, image/jpeg">
+                </li>
+            </ul>
+            <ul class="ui-list ui-list-text ui-border-tb select_this" style="margin-top:10px;">
+                <li class="ui-border-t">
+                    <h4>昵称</h4>
+                    <input type="text" placeholder="昵称" />
+                </li>
+                <li class="ui-border-t">
+                    <h4>生日</h4>
+                    <input type="date" value="2012-05-10" />
+                </li>
+                <li class="ui-border-t">
+                    <h4 id="wufeng">职业</h4>
+                    <div>
+                        <select>
+                            <option>学生</option>
+                            <option>商人</option>
+                            <option>职员</option>
+                            <option>其他</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="ui-list ui-list-text ui-list-link ui-border-tb" style="margin-top:10px;">
+                <li class="ui-border-t" data-href="" >
+    	            <h4>微信</h4>
+                    <div class="ui-txt-info">已绑定</div>
+                </li>
+                <li class="ui-border-t" data-href="" >
+    	            <h4>支付宝</h4>
+                    <div class="ui-txt-info">未绑定</div>
+                </li>
+            </ul>
+            <div class="ui-btn-wrap">
+                <button class="ui-btn-lg ui-btn-danger" ><!--onclick="onhand()"-->
+                    提交
+                </button>
+            </div>
+        </div>
+    </body>
+   <script src="js/zepto.min.js"></script>
+   <script src="js/frozen.js"></script>
+    <script type="text/javascript">
+        $(".select_this li").tap(function(){
+            $(this).find("select").focus();
+            $(this).find("input").focus();
+        })
+        $('.ui-list-link li').tap(function(){
+            location.href= $(this).data('href');
+        });
+
+        function onhand(){               //检查获取路径，结果获取到一个假路径 图片无法赋值到对应路径
+            var check = $("#text").attr('value');
+            alert(check);
+            $("#demo").attr("src",check);
+        }
+
+    </script>
+</html>

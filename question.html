@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <meta name="author" content="ISUX">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>问题反馈</title>
+        <style>
+            body {background:#f0f0f0;}
+            .ui-form {background:inherit;}
+            .alipay_page {max-width: 640px;position: relative;margin:0 auto;-webkit-box-align:center;-webkit-box-pack: center;}
+            .ui-dialog {text-align:center;}
+            .ui-dialog-bd div div p {font-size:0.9rem;}
+            .ui-list select {position: absolute;top:9px;font-size:0.9rem;right: 12px;color:#999;height:27px;border:1px solid #ccc;border-radius:3px;padding:0 25px 0 5px;width:65%;}
+            .tab_arrow {background:url(./img/icon.png) no-repeat 0 -75px;-webkit-background-size:150px auto;-webkit-transform:rotate(90deg);display:inline-block;width:9px;height:15px;position:absolute;right:22px;top:14px;}
+            .ui-form textarea {margin:30px 5% 0px 4%;padding:5px;border:1px solid #999;background:#F6F5F6;width:89%;height:150px;-webkit-box-align:center;-webkit-box-pack: center;}
+            .que_back {background:none;margin:30px 18px 0px 18px;}
+        </style>
+  </head>
+  <body ontouchstart="">
+      <h2 class="common-title ui-border-b"><i><a href=""></a></i><span>问题反馈</span></h2>
+      <div class="alipay_page">
+          <div class="ui-form">
+              <form action="#">
+                  <textarea placeholder="请输入反馈内容，不得小于5个字。"></textarea>
+                  <div class="ui-btn-wrap">
+                      <button class="ui-btn-lg ui-btn-danger">提交反馈</button>
+                  </div>
+              </form>
+          </div>
+          <div class="ui-dialog 4">
+              <div class="ui-dialog-cnt">
+                  <div class="ui-dialog-bd">
+                      <div>
+                          <div><p><i></i>请输入问题反馈类型</p></div>
+                      </div>
+                  </div>
+                  <div class="ui-dialog-ft ui-btn-group">
+                      <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">关闭</button>
+                  </div>
+              </div>
+          </div>
+          <div class="ui-dialog 5">
+              <div class="ui-dialog-cnt">
+                  <div class="ui-dialog-bd">
+                      <div>
+                          <div><p><i></i>反馈内容，不得小于5个字。</p></div>
+                      </div>
+                  </div>
+                  <div class="ui-dialog-ft ui-btn-group">
+                      <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">关闭</button>
+                  </div>
+              </div>
+          </div>
+        <script src="js/zepto.min.js"></script>
+        <script src="js/frozen.js"></script>
+          <script type="text/javascript">
+          $(".ui-btn-lg").tap(function(){
+              //var a = $("option").not(function(){ return !this.selected }).text();
+              var b =$("textarea").val().length;
+              if(b <= 5){
+                //self.location='question_right.html';   //后端调用
+                $(".5").dialog("show");
+              }else{
+                self.location='question_right.html';   //后端调用
+              }
+          });
+        </script>
+      </div>
+  </body>
+</html>

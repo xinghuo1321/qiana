@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <title>开始赚钱</title>
+    </head>
+    <body ontouchstart="" id="inside_single">
+        <div id="inside_top"></div>
+        <div id="inside_middle">
+        </div>
+        <div id="inside_bottom">
+            <button class="ui-btn-lg ui-btn-danger">开始赚钱</button>
+            <p>钱啊是什么</p>
+        </div>
+        <div id="shaodeng">
+            <div class="ui-dialog">
+                <div class="ui-dialog-cnt">
+                    <div class="ui-dialog-bd">
+                        <div>
+                            <p><img src="img/shaodeng.png"></p>
+                            <p>正在自动登录...</p>
+                            <p>系统已成功检测到小助手</p>
+                            <p>请保持小助手运行状态，以免遇到问题</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/zepto.min.js"></script>
+        <script src="js/frozen.js"></script>
+        <script>
+        $("#inside_bottom .ui-btn-lg").tap(function(){     //微信弹窗
+            //if(isWeiXin()){
+                $(".ui-dialog").dialog("show");  //微信打开就会弹窗
+            //}else{
+            //alert("123123");                             //非微信浏览器 进入进入页
+            //}
+        })
+        </script>
+    </body>
+</html>

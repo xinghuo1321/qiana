@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <title>明细</title>
+        <style>
+        </style>
+    </head>
+
+    <body>
+    	<h2 class="common-title ui-border-b"><i><a href=""></a></i><span>明细</span></h2>
+    	<div id="top-detail">
+	    	<div id="zero" class="name0">
+				<div class="active"><a>全部</a></div>
+				<div><a>任务</a></div>
+				<div><a>学徒</a></div>
+				<div><a>提现</a></div>
+			</div>
+		</div>
+		<div id="detail">
+				<ul class="ui-list ui-border-tb active">
+			        <li>
+			            <div class="ui-list-thumb ui-avatar-s">
+			               <span style="background-image:url(./img/detail1.png)"></span>
+			            </div>
+			            <div class="ui-list-info ui-border-t">
+			                <p>2015年4月22日 13:33</p>
+			                <h4>完成：[个人资料]的任务，赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元</h4>
+			            </div>
+			        </li>
+			        <li>
+			            <div class="ui-list-thumb ui-avatar-s">
+			                <span style="background-image:url(./img/detail2.png)"></span>
+			            </div>
+			            <div class="ui-list-info ui-border-t">
+			                <p>2015年4月22日 13:33</p>
+			                <h4>通过支付宝成功提现<i>2</i>元</h4>
+			          </div>
+			        </li>
+			        <li>
+			            <div class="ui-list-thumb ui-avatar-s">
+			                <span style="background-image:url(./img/detail3.png)"></span>
+			            </div>
+			            <div class="ui-list-info ui-border-t">
+			                <p>2015年4月22日 13:33</p>
+			                <h4>成功收徒<i>2</i>人</h4>
+			          </div>
+			        </li>
+				</ul>
+				<ul class="ui-list ui-border-tb">
+			        <li>
+			            <div class="ui-list-thumb ui-avatar-s">
+			               <span style="background-image:url(./img/detail1.png)"></span>
+			            </div>
+			            <div class="ui-list-info ui-border-t">
+			                <p>2015年4月22日 13:33</p>
+			                <h4>完成：[个人资料]的任务，赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元赚了<i>2</i>元</h4>
+			            </div>
+			        </li>
+				</ul>
+				<ul class="ui-list ui-border-tb">
+			        <li>
+			            <div class="ui-list-thumb ui-avatar-s">
+			                <span style="background-image:url(./img/detail3.png)"></span>
+			            </div>
+			            <div class="ui-list-info ui-border-t">
+			                <p>2015年4月22日 13:33</p>
+			                <h4>成功收徒<i>2</i>人</h4>
+			          </div>
+			        </li>
+				</ul>
+				<ul class="ui-list ui-border-tb">
+			        <li>
+			            <div class="ui-list-thumb ui-avatar-s">
+			                <span style="background-image:url(./img/detail2.png)"></span>
+			            </div>
+			            <div class="ui-list-info ui-border-t">
+			                <p>2015年4月22日 13:33</p>
+			                <h4>通过支付宝成功提现<i>2</i>元</h4>
+			          </div>
+			        </li>
+				</ul>
+		</div>
+        <!-- <div class="no-detail"><img src="./img/no-detail.png"></div> //如果以上明细无任何数据时 此元素被显示-->
+    </body>
+	<script src="js/zepto.min.js"></script>
+	<script type="text/javascript">
+		var tabs=$("#zero div");
+		var	divs=$("#detail ul");
+		for(var i=0;i<tabs.length;i++){
+			tabs.click(function(){change(this);})
+			function change(obj){
+			for(var i=0;i<tabs.length;i++)
+			{
+				if(tabs[i]==obj){
+				tabs[i].className="active";
+				divs[i].className="ui-list ui-border-tb active";
+				}
+				else{
+				tabs[i].className="";
+				divs[i].className="ui-list ui-border-tb";
+				}
+			}
+		}
+	}
+	</script>
+
+
+</html>

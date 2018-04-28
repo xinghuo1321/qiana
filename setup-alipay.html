@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <title>支付宝绑定</title>
+        <style>
+            body {background:#f0f0f0;}
+        </style>
+	</head>
+	<body ontouchstart="">
+      <h2 class="common-title ui-border-b"><i><a href=""></a></i><span>支付宝绑定</span></h2>
+      <div id="alipay_page">
+        <div class="ui-form">
+              <h1><img src="./img/alipayicon.png">支付宝绑定</h1>
+              <form action="#">
+                  <div class="alipay_input">
+                      <p for="#">支付宝账号：</p>
+                      <input type="text" oninput="onBlurf(this)" placeholder="12345789@sian.com" />
+                      <a class="ui-icon-close"></a>
+                  </div>
+                  <div class="alipay_input">
+                      <p for="#">姓名：</p>
+                      <input type="text" oninput="onBlurf(this)" placeholder="阿狸" />
+                      <a class="ui-icon-close"></a>
+                  </div>
+                  <div class="alipay_input">
+                      <p for="#">手机：</p>
+                      <input type="text" oninput="onBlurf(this)" placeholder="1235467890" />
+                      <a class="ui-icon-close"></a>
+                  </div>
+                  <div class="ui-btn-wrap">
+                      <button class="ui-btn-lg ui-btn-danger">提交</button>
+                  </div>
+              </form>
+          </div>
+<!--           <div class="ui-dialog">
+              <div class="ui-dialog-cnt">
+                  <div class="ui-dialog-bd">
+                      <div>
+                      <h4>标题</h4>
+                      <div>内容</div></div>
+                  </div>
+                  <div class="ui-dialog-ft ui-btn-group">
+                      <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">关闭</button>
+                  </div>
+              </div>
+          </div> -->
+          <div class="ui-dialog 1">
+              <div class="ui-dialog-cnt">
+                  <div class="ui-dialog-bd">
+                      <div>
+                          <h4>温馨提示</h4>
+                          <div>您还没有添加提现密码</div>
+                      </div>
+                  </div>
+                  <div class="ui-dialog-ft ui-btn-group">
+                      <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">暂不</button>
+                      <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">添加</button>
+                  </div>
+              </div>
+          </div>
+          <div class="ui-dialog 2">
+              <div class="ui-dialog-cnt">
+                  <div class="ui-dialog-bd">
+                      <div>
+                          <h4>温馨提示</h4>
+                          <div><p><input type="password" placeholder="请输入提现密码" /></p><p>如忘记提现密码请联系客服</p></div>
+                      </div>
+                  </div>
+                  <div class="ui-dialog-ft ui-btn-group">
+                      <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">取消</button>
+                      <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">确定</button>
+                  </div>
+              </div>
+          </div>
+          <div class="ui-dialog 3">
+              <div class="ui-dialog-cnt">
+                  <div class="ui-dialog-bd">
+                      <div>
+                          <!-- <h4>标题</h4> -->
+                          <div><p><input type="password" placeholder="请输入提现密码" /></p><p><input type="password" placeholder="请再次输入提现密码" /></p></div>
+                      </div>
+                  </div>
+                  <div class="ui-dialog-ft ui-btn-group">
+                      <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">取消</button>
+                      <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">确定</button>
+                  </div>
+              </div>
+          </div>
+          <div class="ui-dialog 4">
+              <div class="ui-dialog-cnt">
+                  <div class="ui-dialog-bd">
+                      <div>
+                          <h4>温馨提示</h4>
+                          <div><p>添加成功，请返回</p></div>
+                      </div>
+                  </div>
+                  <div class="ui-dialog-ft ui-btn-group">
+                      <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">关闭</button>
+                  </div>
+              </div>
+          </div>
+          <script src="js/zepto.min.js"></script>
+          <script src="js/frozen.js"></script>
+          <script type="text/javascript">
+          $(".ui-btn").tap(function(){
+              $(".4").dialog("show");
+          });
+          $('.ui-icon-close').tap(function (){
+              $(this).parent().find("input").val("");
+              $(this).removeClass("show");
+          });
+
+   /*        $('.alipay_input input').on("blur",function(){
+        	  alert(111);
+          });  */
+
+          function onBlurf(e){
+
+              if($(e).val()==""){
+        	       $(e).parent().find(".ui-icon-close").removeClass("show");
+        	  }else{
+        		  $(e).parent().find(".ui-icon-close").addClass("show");
+        	  };
+           };
+        </script>
+      </div>
+	</body>
+</html>

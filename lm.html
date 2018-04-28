@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <title>联盟任务</title>
+    </head>
+    <style>
+ 	body{background-color: #F5F5F5;}
+    </style>
+
+    <body ontouchstart="">
+        <h2 class="common-title ui-border-b student"><i><a href=""></a></i><span>联盟任务</span></h2>
+        <div id="lm">
+            <ul class="ui-list ui-list-function ui-border-tb">
+                <li>
+                    <div class="ui-avatar-s">
+                        <span style="background-image:url(./img/list_lmrw.png)"></span>
+                    </div>
+                    <div class="ui-list-info ui-border-t">
+                        <h4>联盟任务</h4>
+                    </div>
+                    <div class="ui-btn">进入</div>
+                </li>
+                <li>
+                    <div class="ui-avatar-s">
+                        <span style="background-image:url(./img/list_mlzq.png)"></span>
+                    </div>
+                    <div class="ui-list-info ui-border-t">
+                        <h4>联盟任务</h4>
+                    </div>
+                    <div class="ui-btn">进入</div>
+                </li>
+            </ul>
+        </div>
+    </body>
+    <script src="js/countUp.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        $('.ui-list-link li').click(function(){
+            location.href= $(this).data('href');
+        });
+    </script>
+</html>

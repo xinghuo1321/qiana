@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <title>分享</title>
+    </head>
+    <body ontouchstart="" id="share_single">
+        <div id="share_top"></div>
+        <div id="share_middle">
+            <div><img src="img/detail3.png"></div>
+            <div>
+                <i></i>
+                <p>我是（ID30097342）</p>
+                <p>我玩钱啊已经<i>4</i>天了，邀请你一起来赚钱，完全免费！</p>
+            </div>
+        </div>
+        <div id="shar_bottom">
+            <button class="ui-btn-lg ui-btn-danger">开始赚钱</button>
+            <p>钱啊是什么</p>
+        </div>
+        <div id="weixin">
+            <div class="ui-dialog">
+                <div class="ui-dialog-cnt">
+                    <div class="ui-dialog-bd">
+                        <div>
+                            <i></i>
+                            <p><img src="img/wxicon1.png" />1.点击右上角按钮</p>
+                            <p><img src="img/wxicon2.png" />2.在Safari中打开</p>
+                            <p>新用户100%获得现金红包</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/zepto.min.js"></script>
+        <script src="js/frozen.js"></script>
+        <script>
+        $("#shar_bottom .ui-btn-lg").tap(function(){     //非Safri弹窗
+            if(isntSafari()){
+                alert("是safrai");                       //执行后端，进入首页
+            }else{
+                $("#weixin .ui-dialog").dialog("show");  //Safri打开就弹窗
+            }
+        })
+        function isntSafari(){
+            var ua = window.navigator.userAgent.toLowerCase();
+            if(ua.match(/safari/i) == 'safari'){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        </script>
+    </body>
+</html>

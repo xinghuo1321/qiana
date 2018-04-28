@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <title>成绩单</title>
+    </head>
+    <style>
+    body{background-color: #303843;}
+    </style>
+
+<body>
+    <h2 class="common-title ui-border-b"><i><a href="#" onclick="javascript:window.history.back();return false;"></a></i><span>成绩单</span></h2>
+    <div style="margin:10px;">
+    			<div style="height:8px;background-color: #E2E1E1;"></div>
+
+    			<div class="head_index_shell">
+              <div class="jumbo_head">
+                  <p><img src="./img/default_head.png" style="height:80px;width:80px;-webkit-border-radius:40px;border-radius:40px;"><div style="position: relative;top:-20px;"><img src="./img/zx_lv.png" style="width: 80px;"></div> </p>
+                  <p style="position:relative;top:-45px;font-size: 0.7rem;z-index: 999;color:#E6564B;">LV1</p>
+                  <p style="margin-top:-40px;">昵称</p>
+                   <p>ID:888888</p>
+              </div>
+              <div class="jumbo_ta">
+                  <p class="jumbo_tit">累计收入（元）</p>
+                  <h1 id="myTargetElement" class="jumbo" data-to="22342">22342</h1>
+              </div>
+              <a id="showbut" class="syis"><img src="./img/syis.png"></a>
+          </div>
+          <div style="height:8px;background-color: #E2E1E1;margin-bottom:15px;position:relative;"><img src="./img/belt.png" style="position:absolute;left:5px;top:-5px;width:0.8rem;"><img src="./img/belt.png" style="position:absolute;right:0;width:0.8rem;right:5px;top:-5px;"></div>
+
+          <div style="height:8px;background-color: #E2E1E1;"></div>
+          <div class="line0">
+             <div class="lineleft">
+            	  &nbsp;&nbsp;成长天数
+             </div>
+             <div class="lineright">
+          	    <span class="foncolor">6</span>天&nbsp;&nbsp;
+             </div>
+             <div class="lineleft">
+            	  &nbsp;&nbsp;任务收入
+             </div>
+             <div class="lineright">
+            	  <span class="foncolor">22</span>天&nbsp;&nbsp;
+             </div>
+          </div>
+          <div class="line0">
+             <div class="lineleft">
+          	    &nbsp;&nbsp;邀请收入
+             </div>
+             <div class="lineright">
+          	    <span class="foncolor recast">0</span>元&nbsp;&nbsp;
+             </div>
+             <div class="lineleft">
+          	    &nbsp;&nbsp;提成收入
+             </div>
+             <div class="lineright">
+          	    <span class="foncolor recast">22</span>元&nbsp;&nbsp;
+             </div>
+          </div>
+          <div class="line0" style="height: 96px;">
+            <div class="lineleft">
+            	    &nbsp;&nbsp;徒弟人数
+            </div>
+            <div class="lineright">
+            	   <span class="foncolor">22</span>人&nbsp;&nbsp;
+            </div>
+             <div class="lineleft">
+            	    &nbsp;&nbsp;徒孙人数
+            </div>
+            <div class="lineright">
+          	   <span class="foncolor">2</span>人&nbsp;&nbsp;
+            </div>
+          </div>
+          <div class="shijian">
+       			   分享于2015/01/04 14:10:52&nbsp;&nbsp;&nbsp;
+          </div>
+
+
+    </div>
+    <div class="ui-btn-wrap" style="padding:0 10px;">
+        <button class="ui-btn-lg ui-btn-danger">
+            我也要用钱啊
+        </button>
+    </div>
+
+
+ </body>
+ <script src="js/zepto.min.js"></script>
+        <script src="js/countUp.js"></script>
+        <script type="text/javascript">
+        window.onload = function() {
+            var endVal = $(".jumbo").attr("data-to");
+            var demowf = new countUp("myTargetElement", 0, endVal, 2.5);
+            demowf.start();
+         };
+        </script>
+</html>

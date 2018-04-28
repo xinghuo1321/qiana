@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <title>首页</title>
+
+    </head>
+
+    <body ontouchstart="">
+    	<h2 class="common-title ui-border-b student"><i><a href=""></a></i><span>钱啊</span></h2>
+        <div class="ui-tooltips ui-tooltips-warn" style="-webkit-transition:all 1s ease;height:0;padding:0;">
+            <div class="ui-tooltips-cnt ui-tooltips-cnt-link">
+                <i></i><p style="margin-left: 40px;margin-right: 30px;">建议使用“钱啊入口”，再也不用担心钥匙会失效，体验更佳哦~。</p>
+            </div>
+        </div>
+        <div id="index_top">
+            <div>
+                <p>今日收益（元）</p>
+                <h1 id="myTargetElement" class="index_num" data-to="22342.22"></h1><!-- <i>元</i> -->
+            </div>
+            <div>
+                <p>账户余额：<i id="myTargetElement2" class="index_num" data-to="13"></i></p>
+                <p>总收益：<i id="myTargetElement3" class="index_num" data-to="55"></i></p>
+                <button class="ui-btn ui-btn-danger index_tx">立即提现</button>
+            </div>
+        </div>
+        <div id="index_middle">
+            <ul class="ui-list ui-list-text ui-border-tb ui-list-link">
+                <li class="ui-border-t ui-list-item-link" data-href="">
+                    <img src="./img/default_head.png">
+                    <p>昵称</p>
+                </li>
+            </ul>
+
+            <ul class="ui-list ui-list-text ui-border-b">
+                <li class="ui-border-t">
+                    <div class="ui-badge-wrap">
+                        <img src="./img/ind_1.png"><p>热门任务</p>
+                    </div>
+                    <div class="ui-badge-wrap">
+                        <img src="./img/ind_2.png"><p>联盟任务</p>
+                    </div>
+                    <div class="ui-badge-wrap no-opend">  <!--功能开放时 去掉no-opend 只有关闭功能的时候这个class才添加-->
+                        <img src="./img/ind_3g.png"><p>限时推荐</p>
+                    </div>
+                    <div class="ui-badge-wrap no-opend">  <!--功能开放时 去掉no-opend 只有关闭功能的时候这个class才添加-->
+                        <img src="./img/ind_4g.png"><p>转发任务</p>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="ui-list ui-list-text ui-border-tb ui-list-link">
+                <li class="ui-border-t ui-list-item-link" data-href="">
+                    <img src="./img/add_stu.png">
+                    <p>收徒</p>
+                </li>
+                <li class="ui-border-t ui-list-item-link" data-href="">
+                    <img src="./img/about.png">
+                    <p>其他</p>
+                </li>
+            </ul>
+        </div>
+
+
+        <div id="hb_t1" class="ui-dialog ">   <!-- 推荐任务弹窗 -->
+            <div class="ui-dialog-cnt" style="width:332px;height:100%;background: url(./img/hb_1.png) no-repeat;background-size: 100%;">
+                <div class="ui-dialog-bd">
+                    <div class="hb_detail">
+                        <p>恭喜！您获得现金2元</p>
+                        <div>
+                            <h1>使用说明</h1>
+                            <p>1.做任务下载APP，平均下载一个APP可 赚2元左右，满10元即可提现。</p>
+                            <p>2.提现时不需要任何手续，提现额度越大， 奖励越丰厚。</p>
+                        </div>
+                    </div>
+                    <button class="ui-btn-lg ui-btn-danger">
+                        确定
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="hb_t2" class="ui-dialog">   <!-- 推荐任务弹窗 -->
+            <div class="ui-dialog-cnt" style="width:332px;height:100%;background: url(./img/hb_2.png) no-repeat;background-size: 100%;">
+                <div class="ui-dialog-bd">
+                    <div class="hb_choice">
+                        <p>新用户红包奖励</p>
+                        <button class="ui-btn-lg ui-btn-danger hb_tap">
+                        有邀请ID（送<i>3</i>元）
+                        </button>
+                        <div class="hb_input">
+                            <div class="form_item">
+                                <input type="text">
+                            </div>
+                            <button class="ui-btn-lg ui-btn-danger">
+                                确定
+                            </button>
+                        </div>
+                        <button class="ui-btn-lg ui-btn-danger no-yq">
+                        无邀请ID（送<i>2</i>元）
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/countUp.js"></script>
+ 	<script src="js/frozen.js"></script>
+    <script type="text/javascript">
+        function wait(){
+            setTimeout("warn()",3000);
+        }
+        function warn(){
+            $(".ui-tooltips-warn").css({"height":"46px","padding":"10px 0"});
+        }
+        window.onload = function() {
+            wait();
+            var endVal = $("#myTargetElement").attr("data-to");
+            var endVal2 = $("#myTargetElement2").attr("data-to");
+            var endVal3 = $("#myTargetElement3").attr("data-to");
+            var demowf = new countUp("myTargetElement", 0, endVal, 2.5);
+            var demowf2 = new countUp("myTargetElement2", 0, endVal2, 2.5);
+            var demowf3 = new countUp("myTargetElement3", 0, endVal3, 2.5);
+            demowf.start();demowf2.start();demowf3.start();
+            $("#hb_t2").addClass("show");
+            if($(document).height() > window.screen.height){
+            $("#hb_t1").css("height",$(document).height());
+            $("#hb_t2").css("height",$(document).height());
+        }else{
+            $("#hb_t1").css("height",window.screen.height);
+            $("#hb_t2").css("height",window.screen.height);
+         }
+        }
+
+        $('.ui-list-link li').click(function(){
+            location.href= $(this).data('href');
+        });
+        $("#hb_t1 .ui-btn-danger").tap(function(){
+            $("#hb_t1").removeClass("show");
+        })
+        $(".no-yq").tap(function(){
+            $("#hb_t2").removeClass("show");
+            $("#hb_t1").addClass("show");
+        })
+        $(".hb_tap").tap(function(){
+            $(this).css('display','none');
+            $(".hb_input").css('display','block');
+        })
+    </script>
+
+</html>

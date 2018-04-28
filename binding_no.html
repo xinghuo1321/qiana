@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <script src="js/countUp.js"></script>
+        <script src="js/zepto.min.js"></script>
+        <title>微信绑定</title>
+    </head>
+    <style>
+ 	body{background-color:#F5F5F5;}
+    </style>
+
+    <body ontouchstart="">
+        <h2 class="common-title ui-border-b student"><i><a href=""></a></i><span>微信绑定</span></h2>
+        <div id="wx_bd">
+            <div>
+                <div>
+                    <i></i><h1>第一步</h1>
+                    <span>关注钱啊微信公众账号</span>
+                </div>
+                <p>为了您的账号安全，请先进行微信号绑定， 完成绑定即可安心兑换。请长按下方虚线复制关键字，打开微信查找并关注公众号。</p>
+                <button class="ui-btn-lg ui-btn-qiana"><span>钱啊</span></button>
+                <p>长按虚线框，拷贝关键字</p>
+                <p>或者长按并储存以下二维码图片，打开微信扫一扫识别该二维码，关注钱啊服务号。</p>
+                <div style="text-align:center;"><img style="width:50%;" src="img/default_ewm.png"></div>
+                <p><i></i></p>
+                <p>若长按无效，请直接截屏</p>
+                <p>同样可以通过微信识别截屏中的二维码</p>
+            </div>
+            <div>
+                <div>
+                    <i></i><h1>第二步</h1>
+                    <span>关注完成后，请点击“绑定账 号”获取验证码。</span>
+                </div>
+                <input class="ui-btn-lg yzm" placeholder="请输入验证码" oninput="Oninput()" />
+                <button class="ui-btn-lg disabled tji">提交</button>
+            </div>
+        </div>
+    </body>
+    <script src="js/countUp.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+        function Oninput(){
+            if($(".yzm").val() ==''){
+            $(".tji").addClass("disabled");
+            }else{
+               $(".tji").addClass("ui-btn-danger").removeClass("disabled");
+            }
+        }
+    </script>
+</html>

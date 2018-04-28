@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <title>限时推荐</title>
+
+        <style>
+        </style>
+    </head>
+
+    <body ontouchstart="">
+
+		<h2 class="common-title ui-border-b"><i><a href=""></a></i><span>限时推荐</span></h2>
+
+		<ul id="recommend" class="ui-list ui-list-function ui-border-tb">
+            <li>
+                <div class="ui-avatar-s">
+                    <span style="background-image:url(./img/d_2.png)"></span>
+                </div>
+                <div class="ui-list-info ui-border-t">
+                    <h4>世界2_魔物狩猎</h4>
+                    <p>首次安装并升级到3级获奖</p>
+                </div>
+                <!-- <div class="ui-btn ui-btn-danger rec">2元</div> -->
+                <div class="ui-btn ui-btn-danger mmend">任务完成</div>
+            </li>
+            <li class="rec">
+                <div class="ui-avatar-s">
+                    <span style="background-image:url(./img/d_2.png)"></span>
+                </div>
+                <div class="ui-list-info ui-border-t">
+                    <h4>世界2_魔物狩猎</h4>
+                    <p>首次安装并升级到3级获奖</p>
+                </div>
+                <div class="ui-btn ui-btn-danger">2元</div>
+            </li>
+            <li class="rec2">
+                <div class="ui-avatar-s">
+                    <span style="background-image:url(./img/d_2.png)"></span>
+                </div>
+                <div class="ui-list-info ui-border-t">
+                    <h4>美颜相机 - 把手机变成自拍神器！</h4>
+                    <p>首次安装并升级到3级获奖</p>
+                </div>
+                <div class="ui-btn ui-btn-danger">1.31元</div>
+            </li>
+        </ul>
+
+
+        <div id="rec_dialog">
+            <div class="ui-dialog">   <!-- 推荐任务弹窗 -->
+                <div class="ui-shadow"></div>
+                <div class="ui-dialog-cnt">
+                    <div class="ui-dialog-bd">
+                    	<div class="recommend_log">
+    	                	<div class="recommend_shild">
+    	                		<div class="recommend_log_top">
+    	                			<div><img src="./img/default_head.png"></div>
+    	                			<div><p>世界2_魔物狩猎</p></div>
+    	                			<i></i>
+    	                		</div>
+    	                	</div>
+    	                	<ul>
+    	                		<li class="ui-border-t"><div class="ui-badge">1</div><p>点击“开始任务”，跳转至AppStore下载页，点击获取安装应用</p></li>
+    	                		<li class="ui-border-t"><div class="ui-badge">2</div><p>打开应用，进行试玩3分钟。</p></li>
+    	                		<li class="ui-border-t"><div class="ui-badge">3</div><p>返回钱啊“提交审核”，获得奖励。</p></li>
+    	                	</ul>
+    	                	<div class="ui-btn-wrap">
+    				            <button class="ui-btn-lg ui-btn-danger start-mission" onclick="jumpappstore1()">
+    				                开始任务
+    				            </button>
+    				        </div>
+    				        <div class="ui-btn-wrap">
+    				            <button class="ui-btn-lg disabled">
+    				                提交审核
+    				            </button>
+    				        </div>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="rec_tap_dialog">
+            <div class="ui-dialog">   <!-- 推荐任务弹窗 -->
+                <div class="ui-shadow"></div>
+                <div class="ui-dialog-cnt">
+                    <div class="ui-dialog-bd">
+                        <div class="recommend_log">
+                            <div class="recommend_shild">
+                                <div class="recommend_log_top">
+                                    <div><img src="./img/default_head.png"></div>
+                                    <div><p>世界2_魔物狩猎</p></div>
+                                    <i></i>
+                                </div>
+                            </div>
+                            <button class="ui-btn-lg ui-btn-app">
+                                <span>http://qiana.com/</span>
+                            </button>
+                            <p>长按虚线框，拷贝关键字</p>
+                            <ul>
+                                <li class="ui-border-t"><div class="ui-badge">1</div><p>长按虚线框，拷贝关键字</p></li>
+                                <li class="ui-border-t"><div class="ui-badge">2</div><p>点击“去App Store搜索”按钮，跳转搜索页，粘贴关键字搜索下载</p></li>
+                                <li class="ui-border-t"><div class="ui-badge">3</div><p>打开应用，进行试玩3分钟。</p></li>
+                                <li class="ui-border-t"><div class="ui-badge">4</div><p>返回钱啊“提交审核”，获得奖励。</p></li>
+                            </ul>
+                            <div class="ui-btn-wrap">
+                                <button class="ui-btn-lg ui-btn-danger start-mission" onclick="jumpappstore2()">
+                                    去App Store搜索
+                                </button>
+                            </div>
+                            <div class="ui-btn-wrap">
+                                <button class="ui-btn-lg disabled">
+                                    提交审核
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </body>
+	<script src="js/zepto.min.js"></script>
+ 	<script src="js/frozen.js"></script>
+    <script type="text/javascript">
+        function jumpappstore1(){            //无复制应用 点击开始任务需要赋值给var
+            var thisjump = "美图秀秀";
+            window.open("https://itunes.apple.com/WebObjects/MZStore.woa/wa/search?mt=8&submit=edit&term="+thisjump+"#software");
+        }
+        function jumpappstore2(){            //有赋值应用 不需要赋值 点击开始任务 会跳到appstore的搜索页
+            window.open("https://itunes.apple.com/WebObjects/MZStore.woa/wa/search?mt=8&submit=edit&term=#software");
+        }
+        $(".rec").tap(function(){
+    		//alert("123");
+            $("#rec_dialog .ui-dialog").addClass("show");
+        })
+        $(".rec2").tap(function(){
+            //alert("123");
+            $("#rec_tap_dialog .ui-dialog").addClass("show");
+        })
+        /*$(".ui-btn-app span").bind({         //绑定拷贝事件，暂时不用
+                var bianl = "美图秀秀"
+                copy : function(){
+                    window.open("https://itunes.apple.com/WebObjects/MZStore.woa/wa/search?mt=8&submit=edit&term=美图秀秀#software")
+                }
+        });*/
+        $(".recommend_log_top i").tap(function(){
+        	$(".ui-dialog").removeClass("show");
+        })
+        $(".start-mission").tap(function(){
+            $(this).addClass("disabled");
+            $(this).removeClass("ui-btn-danger");
+            $(this).html('进行中...');
+        })
+    </script>
+
+</html>

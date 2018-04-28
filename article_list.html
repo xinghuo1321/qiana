@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="qiana" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/frozen.css">
+        <title>限时推荐</title>
+
+        <style>
+            .ui-list li:active {background:#eee;}
+        </style>
+    </head>
+    <body ontouchstart="">
+
+        <h2 class="common-title ui-border-b"><i><a href=""></a></i><span>&nbsp;</span></h2>
+
+        <ul id="article" class="ui-list ui-list-function ui-border-tb">
+            <li data-href="">
+                <div class="ui-avatar-s">
+                    <span style="background-image:url(./img/d_2.png)"></span>
+                </div>
+                <div class="ui-list-info ui-border-t">
+                    <h4>当街头10岁小孩找你借火点烟你会当街头10岁小孩找你借火点烟你会当街头10岁小孩找你借火点烟你会当街头10岁小孩找你借火点烟你会当街头10岁小孩找你借火点烟你会当街头10岁小孩找你借火点烟你会？</h4>
+                    <p><span><img src="img/watch.png"><b class="demo">1</b></span><span><img src="img/forward.png"><b class="demo2">2</b></span></p>
+                    <span>¥&nbsp;0.01</span>
+                </div>
+            </li>
+            <li data-href="">
+                <div class="ui-avatar-s">
+                    <span style="background-image:url(./img/d_2.png)"></span>
+                </div>
+                <div class="ui-list-info ui-border-t">
+                    <h4>当街头10岁小孩找</h4>
+                    <p><span><img src="img/watch.png"><b class="demo">0</b></span><span><img src="img/forward.png"><b class="demo2">0</b></span></p>
+                    <span>¥&nbsp;0.01</span>
+                </div>
+            </li>
+        </ul>
+
+    </body>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/frozen.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+
+            $('.ui-list li').click(function(){
+            location.href= $(this).data('href');
+            });
+
+            $(".demo").each(function(){
+                if($(this).text() == 0){
+                    $(this).text("转发");
+                }
+            })
+
+            $(".demo2").each(function(){
+                if($(this).text() == 0){
+                    $(this).text("阅读");
+                }
+            })
+        }
+    </script>
+</html>
